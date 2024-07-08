@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hero {
+            background-color: antiquewhite;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .circles {
+            position: absolute;
+            bottom: -25%; /* Positioning half of the image outside the hero */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .circles img {
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+            position: absolute;
+            animation: rotate linear infinite;
+        }
+
+        .circles img:nth-child(1) {
+            animation-duration: 10s;
+        }
+
+        .circles img:nth-child(2) {
+            animation-duration: 10s;
+        }
+
+        .circles img:nth-child(3) {
+            animation-duration: 10s;
+        }
+
+        .circles img:nth-child(4) {
+            animation-duration: 10s;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translateX(-50%) translateY(-50%) rotate(0deg);
+            }
+            100% {
+                transform: translateX(-50%) translateY(-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="circles">
+            <img src="./images/circle 1.png" alt="Circle 1">
+            <img src="./images/circle 2.png" alt="Circle 2">
+            <img src="./images/circle 3.png" alt="Circle 3">
+            <img src="./images/circle 4.png" alt="Circle 4">
+        </div>
+    </section>
+</body>
+</html>
